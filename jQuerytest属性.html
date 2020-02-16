@@ -1,0 +1,67 @@
+<html>
+<head>
+<title>JQuery lesson</title>
+<script src="Jquery-1.12.0.js"></script>
+
+</head>
+<body>
+<p>Hello, <span>Person</span> <a href="#">and person</a></p>
+<div>this is div</div>
+<img src="girl13.jpeg" id="girl" style="width:200px;height:200px"/><br />
+<input type="button" id='bigger' value="bigger" /><input type="button" id='smaller' value="smaller" />
+<input type="text" />
+<style>
+	/*#girl{
+		width: 50;
+		height:50;
+	}*/
+</style>
+<script type="text/javascript">
+    // //将p标签的文字颜色修改为黄色，字体改为24px
+    //  $("p").css({color: "yellow",fontSize: 24,backgroundColor: 'pink'});
+    //  //修改div标签的样式
+    // $("div").css({display: "block",backgroundColor: 'lime',width:"60%",textAlign:"center"});
+
+//  //修改img的宽高
+//  
+//  	$("img").css({width:200,height:200});
+//   $(function(){
+//   	 var w=$("#girl").width();
+//       var h=$("#girl").height();
+//  alert("width=" +w+":"+"height="+h);
+//   })
+    
+    //利用offset修改图片位置
+    //$("img").offset({top:50,left:100});
+    //点击按钮显示图片坐标
+//  $(":button").click(function () {
+//      var x=$("img").position().left;
+//      var y=$("img").position().top;
+//      alert("x=" +x + ":" +"y=" +y);
+//  })
+//  //点击文本框显示文本框的宽高
+//  $(":text").click(function () {
+//      var w = $(this).innerWidth();
+//      var h = $(this).innerHeight();
+//      //alert("innerWidth" +":"+w + ":" +"innerHeight" +":"+h);
+//      var ow = $(this).outerWidth();
+//      var oh = $(this).outerHeight();
+//      alert("innerWidth" +":"+w + "   " +"innerHeight" +":"+h + "\r\n"+"outerWidth" +":"+ow + "   " +"outerHeight" +":"+oh);
+//  });
+    //点击按钮放大
+      var w = 50;
+      var h = 50;
+    $("#bigger").click(function(){
+    	
+    	$("#girl").width($("#girl").width()*1.2);
+    	$("#girl").height($("#girl").height()*1.1);
+    });
+    //点击smaller按钮缩小
+     $("#smaller").click(function(){
+    	
+    	$("#girl").width($("#girl").width()/1.08);
+    	$("#girl").height($("#girl").height()/1.1);
+    });
+</script>
+</body>
+</html>

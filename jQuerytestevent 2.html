@@ -1,0 +1,50 @@
+<html>
+<head>
+<title>JQuery lesson</title>
+<script type="text/javascript" src="jquery-1.12.0.js"></script>
+
+</head>
+<body>
+ 
+
+<div><img src="girl13.jpeg" id="girl" /></div>
+<p>sayhello</p>
+ 
+<style type="text/css">
+    #girl{
+        width:200px;
+        height:200px;
+    }
+	.smClass{
+        width:50px;
+        height: 50px;
+    }
+    .mdClass{
+        width: 500px;
+        height: 500px;
+    }
+</style>
+<script type="text/javascript">
+
+    //换图
+     $("#girl").bind({"click":function () {
+       $("#girl").attr("src","scene1.jpg");
+    },"mouseover":function (){
+        $("#girl").attr("src","scene2.jpg");
+        },"mouseout":function () {
+            $("#girl").attr("src","scene3.jpg");
+
+        }});
+     //one()的用法，当元素第一次被点击时有效
+    $("body").one("click",function () {
+        //alert("welcome !!this is a sample page that demonstrate the jQuery event");
+    });
+    //trigger
+    $("p").bind("click", function (event, message1, message2) {
+      alert(message1 + ' ' + message2);
+    });
+    $("p").trigger("click", ["Hello","World!"]);
+
+</script>
+</body>
+</html>

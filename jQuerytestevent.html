@@ -1,0 +1,73 @@
+<html>
+<head>
+<title>JQuery lesson</title>
+<script type="text/javascript" src="jquery-1.12.0.js"></script>
+
+</head>
+<body>
+ 
+
+<div><img src="girl13.jpeg" id="girl" /><br/><button id="test1">effect1</button> </div><div><img src="girl4.jpg" id="girl1"   /></div><br/>
+
+ 
+<style type="text/css">
+    #girl{
+        width:200px;
+        height:200px;
+    }
+	.smClass{
+        width:50px;
+        height: 50px;
+    }
+    .mdClass{
+        width: 500px;
+        height: 500px;
+    }
+</style>
+<script type="text/javascript">
+    //on函数的用法
+    // $("#girl1").on("click",function () {
+    //
+    //        // $("#girl1").width($("#girl1").width()+50);
+    //       window.setInterval(function () {
+    //          // $("#girl1").width($("#girl1").width()+50);
+    //           $("#girl1").fadeToggle(5000);
+    //           $("#girl").toggle(3000);
+    //       },1000);
+    // });
+    //绑定鼠标事件
+   // $("#girl").bind("click",function () {
+   //     $("#girl").toggleClass("smClass");
+   // });
+   //  $("#girl").bind("mouseover",function () {
+   //      $("#girl").addClass("mdClass");
+   // });
+   //   $("#girl").bind("mouseout",function () {
+   //      $("#girl").removeClass("mdClass");
+   // });
+     //同时绑定三个事件
+    // $("#girl").bind({"click":function () {
+    //    $("#girl").toggleClass("smClass");
+    // },"mouseover":function (){
+    //     $("#girl").addClass("mdClass");
+    //     },"mouseout":function () {
+    //         $("#girl").removeClass("mdClass");
+    //         $("#girl").removeClass("smClass");
+    //     }});
+    //换图
+     $("#girl").bind({"click":function () {
+       $("#girl").attr("src","scene1.jpg");
+    },"mouseover":function (){
+        $("#girl").attr("src","scene2.jpg");
+        },"mouseout":function () {
+            $("#girl").attr("src","scene3.jpg");
+
+        }});
+     //one()的用法，当元素第一次被点击时有效
+    $("body").one("click",function () {
+        //alert("welcome !!this is a sample page that demonstrate the jQuery event");
+    });
+
+</script>
+</body>
+</html>

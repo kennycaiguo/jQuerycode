@@ -1,0 +1,67 @@
+<html>
+<head>
+<title>JQuery lesson</title>
+<script src="Jquery-1.12.0.js"></script>
+
+</head>
+<body>
+ 
+<div>this is div</div>
+<img src="girl13.jpeg" id="girl" style="width:200px;height:200px"/><br />
+<input type="button" id='bigger' value="bigger" /><input type="button" id='smaller' value="smaller" />
+<input type="text" />
+<style>
+	/*#girl{
+		width: 50;
+		height:50;
+	}*/
+</style>
+<script type="text/javascript">
+   //设置div标签的class
+//  $("div").data("class","div1");
+//  alert( $("div").data("class"));
+       $("div").data("organ",{first:"pussy",second:"tit",third:"vagina"});
+       alert( $("div").data("organ").first);
+       $("div").removeData( $("div").data("organ").third);
+       alert( $("div").data("organ").third);
+//  	$("img").css({width:200,height:200});
+//   $(function(){
+//   	 var w=$("#girl").width();
+//       var h=$("#girl").height();
+//  alert("width=" +w+":"+"height="+h);
+//   })
+    
+    //利用offset修改图片位置
+    //$("img").offset({top:50,left:100});
+    //点击按钮显示图片坐标
+//  $(":button").click(function () {
+//      var x=$("img").position().left;
+//      var y=$("img").position().top;
+//      alert("x=" +x + ":" +"y=" +y);
+//  })
+//  //点击文本框显示文本框的宽高
+//  $(":text").click(function () {
+//      var w = $(this).innerWidth();
+//      var h = $(this).innerHeight();
+//      //alert("innerWidth" +":"+w + ":" +"innerHeight" +":"+h);
+//      var ow = $(this).outerWidth();
+//      var oh = $(this).outerHeight();
+//      alert("innerWidth" +":"+w + "   " +"innerHeight" +":"+h + "\r\n"+"outerWidth" +":"+ow + "   " +"outerHeight" +":"+oh);
+//  });
+    //点击按钮放大
+      var w = 50;
+      var h = 50;
+    $("#bigger").click(function(){
+    	
+    	$("#girl").width($("#girl").width()*1.2);
+    	$("#girl").height($("#girl").height()*1.1);
+    });
+    //点击smaller按钮缩小
+     $("#smaller").click(function(){
+    	
+    	$("#girl").width($("#girl").width()/1.08);
+    	$("#girl").height($("#girl").height()/1.1);
+    });
+</script>
+</body>
+</html>
